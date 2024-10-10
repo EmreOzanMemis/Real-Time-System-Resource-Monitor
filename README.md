@@ -50,7 +50,7 @@ Script Açıklaması
         `Get-Date komutu` kullanılarak mevcut tarih ve saat formatlanarak alınır.
         Tarih ve saat, `MM/dd/yyyy` ve `HH:mm:ss` formatında gösterilir.
 
-Disk ve Network Driver Resoruce Monitor scriptinde aşağıdaki bölümde eklenmiştir. Geliştirilmiş Versiyon olarak düşünebilirsiniz. 
+Disk ve Network Driver Resoruce Monitor scriptinde aşağıdaki bölümde eklenmiştir. Geliştirilmiş Versiyon 2 olarak düşünebilirsiniz. 
 
 ```     
  # Disk sürücü ölçümleri
