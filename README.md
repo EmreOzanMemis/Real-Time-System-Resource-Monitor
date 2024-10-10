@@ -50,8 +50,9 @@ Script Açıklaması
         `Get-Date komutu` kullanılarak mevcut tarih ve saat formatlanarak alınır.
         Tarih ve saat, `MM/dd/yyyy` ve `HH:mm:ss` formatında gösterilir.
 
-Disk ve Network Driver Resoruce Monitor scriptinde aşağıdaki bölümde eklenmiştir.
- ```     
+Disk ve Network Driver Resoruce Monitor scriptinde aşağıdaki bölümde eklenmiştir. Geliştirilmiş Versiyon olarak düşünebilirsiniz. 
+
+```     
  # Disk sürücü ölçümleri
  $DiskReadBytesPerSec = Get-Counter '\PhysicalDisk(_Total)\Disk Read Bytes/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
  $DiskWriteBytesPerSec = Get-Counter '\PhysicalDisk(_Total)\Disk Write Bytes/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
