@@ -50,6 +50,17 @@ Script Açıklaması
         `Get-Date komutu` kullanılarak mevcut tarih ve saat formatlanarak alınır.
         Tarih ve saat, `MM/dd/yyyy` ve `HH:mm:ss` formatında gösterilir.
 
+Disk ve Network Driver Resoruce Monitor scriptinde aşağıdaki bölümde eklenmiştir.
+ ```     
+ # Disk sürücü ölçümleri
+ $DiskReadBytesPerSec = Get-Counter '\PhysicalDisk(_Total)\Disk Read Bytes/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
+ $DiskWriteBytesPerSec = Get-Counter '\PhysicalDisk(_Total)\Disk Write Bytes/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
+
+ # Network sürücü ölçümleri
+ $BytesReceivedPerSec = Get-Counter '\Network Interface(*)\Bytes Received/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
+ $BytesSentPerSec = Get-Counter '\Network Interface(*)\Bytes Sent/sec' | Select-Object -ExpandProperty CounterSamples | Select-Object -ExpandProperty CookedValue
+```
+
   Bilgilerin Konsola Yazdırılması:
         `Write-Host` komutu, yukarıda toplanan tüm bilgileri bir satır olarak ekrana yazar.
         Bu satırda tarih, saat, CPU yükü, bellek kullanımı, C: sürücüsünün boş ve toplam kapasitesi gösterilir.
@@ -66,8 +77,6 @@ Neden Kullanılır?
   Sorun Tespiti ve Teşhis: Anormal CPU veya bellek kullanımı gibi sorunların teşhis edilmesine yardımcı olur.
 
   Geliştirme ve Optimizasyon: Sistem optimizasyonu veya geliştirme çalışmalarında, kaynak kullanımını izleyerek yapılacak geliştirmelerin etkisini gözlemleme imkânı sağlar.  
-      
-
 
 
         
